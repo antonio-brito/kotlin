@@ -1,0 +1,102 @@
+{
+  "ownKey": "kotlindoc",
+  "childrenPages": {"com": {
+    "ownKey": "com",
+    "childrenPages": {"globalkit": {
+      "ownKey": "globalkit",
+      "childrenPages": {"microapps": {
+        "ownKey": "microapps",
+        "childrenPages": {"bus": {
+          "ownKey": "bus",
+          "childrenPages": {
+            "core": {
+              "ownKey": "core",
+              "childrenPages": {"domain": {
+                "ownKey": "domain",
+                "childrenPages": {
+                  "RequestMessage": {
+                    "ownKey": "RequestMessage",
+                    "ownPages": [{
+                      "reference": {
+                        "path": "com/globalkit/microapps/bus/core/domain",
+                        "baseUrl": "http://localhost:8080",
+                        "fileName": "RequestMessage",
+                        "extension": "html",
+                        "usePrettyUrl": true,
+                        "link": "http://localhost:8080/com/globalkit/microapps/bus/core/domain/RequestMessage"
+                      },
+                      "description": "",
+                      "title": "RequestMessage",
+                      "content": "<p>RequestMessage is a data class which is instantiated any time whe need to publish into the Bus.\nThis class indicates the id, headers and parameters for any massage to be passed through the Bus; this class represents the request messages to be passed<p>Also look at <a href=\"/com/globalkit/microapps/bus/core/domain/ResponseMessage\">ResponseMessage<\/a>, <a href=\"/com/globalkit/microapps/bus/service/Bus\">Bus<\/a><\/p><init>\nRequestMessage is a data class which is instantiated any time whe need to publish into the Bus.\nThis class indicates the id, headers and parameters for any massage to be passed through the Bus; this class represents the request messages to be passed<p>Also look at <a href=\"/com/globalkit/microapps/bus/core/domain/ResponseMessage\">ResponseMessage<\/a>, <a href=\"/com/globalkit/microapps/bus/service/Bus\">Bus<\/a><\/p>\nid\n<code>required<\/code> <b>Unique<\/b> id for a request instance. Every time a new instance of this class is created, a new id must be provided.\nTe main goal of this attribute is to have a unique id per request in order to get responses, from subscribers, for this id.\nheaders\n<code>optional<\/code> Json formatted headers needed by subscribers in order to successfully attend the request. This headers are specified by any subscriber, in case it needs any.\nparameters\n<code>optional<\/code> Json formatted parameters needed by subscribers in order to successfully attend the request. This parameters are specified by any subscriber, in case it needs any.\ncomplete\nMethod to be called whenever the publish response has ben completely processed.\nThis method <b>must<\/b> be called in order to avoid memory leaks and have good performance.<\/p>\n"
+                    }]
+                  },
+                  "ResponseMessage": {
+                    "ownKey": "ResponseMessage",
+                    "ownPages": [{
+                      "reference": {
+                        "path": "com/globalkit/microapps/bus/core/domain",
+                        "baseUrl": "http://localhost:8080",
+                        "fileName": "ResponseMessage",
+                        "extension": "html",
+                        "usePrettyUrl": true,
+                        "link": "http://localhost:8080/com/globalkit/microapps/bus/core/domain/ResponseMessage"
+                      },
+                      "description": "",
+                      "title": "ResponseMessage",
+                      "content": "<p>ResponseMessage is a data class which is instantiated any time whe need to generate a response for a request. This\nclass indicates the id, the result body, any error detail (if any) and if the request treatment succeeded or not<p>Also look at <a href=\"/com/globalkit/microapps/bus/core/domain/RequestMessage\">RequestMessage<\/a>, <a href=\"/com/globalkit/microapps/bus/service/Bus\">Bus<\/a><\/p><init>\nResponseMessage is a data class which is instantiated any time whe need to generate a response for a request. This\nclass indicates the id, the result body, any error detail (if any) and if the request treatment succeeded or not<p>Also look at <a href=\"/com/globalkit/microapps/bus/core/domain/RequestMessage\">RequestMessage<\/a>, <a href=\"/com/globalkit/microapps/bus/service/Bus\">Bus<\/a><\/p>\nisSuccess\nindicates whether the request was successfully processed or not\nid\n<code>optional<\/code> id for a response instance. This attribute is intended to contain the same id value at the request instance\nthis response is instance is for. Te main goal is to establish a request-response relationship. Subscribers are the ones\nwhich create this response instances.<p><i>It is highly recommended that this attribute contains the value of the request id that generated this response<\/i><\/p>\nresult\n<code>optional<\/code> Json formatted message which indicates the response for the processed request\nerror\n<code>optional<\/code> if there was an error, you could get the exception detail from this attribute<\/p>\n"
+                    }]
+                  }
+                },
+                "ownPages": [{
+                  "reference": {
+                    "path": "com/globalkit/microapps/bus/core",
+                    "baseUrl": "http://localhost:8080",
+                    "fileName": "domain",
+                    "extension": "html",
+                    "usePrettyUrl": true,
+                    "link": "http://localhost:8080/com/globalkit/microapps/bus/core/domain"
+                  },
+                  "description": "",
+                  "title": "com.globalkit.microapps.bus.core.domain",
+                  "content": ""
+                }]
+              }}
+            },
+            "service": {
+              "ownKey": "service",
+              "childrenPages": {"Bus": {
+                "ownKey": "Bus",
+                "ownPages": [{
+                  "reference": {
+                    "path": "com/globalkit/microapps/bus/service",
+                    "baseUrl": "http://localhost:8080",
+                    "fileName": "Bus",
+                    "extension": "html",
+                    "usePrettyUrl": true,
+                    "link": "http://localhost:8080/com/globalkit/microapps/bus/service/Bus"
+                  },
+                  "description": "",
+                  "title": "Bus",
+                  "content": "<p>Main object-class which provides bus functionality. You must use this object for <b>subscribing<\/b> to any topic , <b>publishing<\/b> messages to any topic and <b>unsubscribing<\/b> from a topic.\nThis implementation follows a <a href=\"https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern\">Publish-Subscribe pattern<\/a>, which is a messaging pattern, following a <b>topic-based<\/b> filtering.<p>This means:<\/p><ul><li>if you want to <b>attend requests<\/b>, at a specific topic, you must <b>subscribe<\/b> to that specific topic through <code>subscribe<\/code> method<\/li><li>if you want to <b>publish a message<\/b>, to a specific topic, you must send a RequestMessage instance to that specific topic through <code>publishAsync<\/code> method<\/li><li>if you want to <b>stop attending requests<\/b>, you must <b>unsubscribe<\/b> through <code>unsubscribe<\/code> method<\/li><\/ul><p>Also look at <a href=\"/com/globalkit/microapps/bus/core/domain/RequestMessage\">RequestMessage<\/a>, <a href=\"/com/globalkit/microapps/bus/core/domain/ResponseMessage\">ResponseMessage<\/a><\/p><\/p>\n<p>subscribe\nThis method allows you to subscribe to a specified topic in order to attend messages. You must specify, within a lambda function, how to treat/process the request instance\nand must return a <code>Single&lt;ResponseMessage&gt;<\/code>\npublishAsync\nThis method allows you to publish a message, in a broadcast mode, to a specific topic and get an Observable containing the responses for that message; responses from all subscribers in the specified topic.\nunsubscribe\nThis method allows you to <b>stop subscribers from attending requests<\/b>. In performance terms, <b>this is a very important method you must call, once per subscription, whenever you need toindicate that the subscriber is not attending requests anymore<\/b>\npublishAsyncWithoutResponse\nThis method allows you to deliver a message, in a broadcast mode, to a specific topic.<p>The unique difference with <code>publishAsync(topic: String, message: RequestMessage)<\/code> method is that  this method will not retrieve any responses for the delivered message.<\/p><p><i>Use <code>publishAsyncWithoutResponse(topic: String, message: RequestMessage)<\/code> instead of <code>publishAsync(topic: String, message: RequestMessage)<\/code> method when you do not need any responses from subscribers, you just need to deliver a message and you do not matter what happens after that<\/i><\/p><\/p>\n"
+                }]
+              }},
+              "ownPages": [{
+                "reference": {
+                  "path": "com/globalkit/microapps/bus",
+                  "baseUrl": "http://localhost:8080",
+                  "fileName": "service",
+                  "extension": "html",
+                  "usePrettyUrl": true,
+                  "link": "http://localhost:8080/com/globalkit/microapps/bus/service"
+                },
+                "description": "",
+                "title": "com.globalkit.microapps.bus.service",
+                "content": ""
+              }]
+            }
+          }
+        }}
+      }}
+    }}
+  }}
+}

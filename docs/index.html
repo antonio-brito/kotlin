@@ -1,0 +1,407 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.16.9"/>
+<link rel="icon" href="http://localhost:8080/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>Global MicroApps Bus</title>
+
+
+<meta name="description" content="Global MicroApps Bus project Documentation">
+
+
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.16.9","baseUrl":"http://localhost:8080","environment":"debug","version":"unspecified"};
+</script>
+
+
+
+
+
+<!-- start:debug info -->
+
+<!-- THEME -->
+<!-- Type: Editorial -->
+<!-- Class: com.eden.orchid.editorial.EditorialTheme -->
+
+<!-- PAGE -->
+<!-- Type: frontPage -->
+<!-- Class: com.eden.orchid.api.theme.pages.OrchidPage -->
+<!-- Layout: index -->
+<!-- Resolved Layout: templates/layouts/index.peb -->
+<!-- Page Template: frontPage, page -->
+<!-- Resolved Page Template:  -->
+
+<!-- RESOURCE -->
+<!-- Class: com.eden.orchid.api.resources.resource.FileResource -->
+<!-- Source Filename: homepage.md -->
+
+<!-- COMPLETE PAGE CONFIGURATION -->
+<script>
+    window.allData = {"reference":{"path":"","baseUrl":"http://localhost:8080","fileName":"","extension":"html","usePrettyUrl":true,"link":"http://localhost:8080"},"description":"","title":"Global MicroApps Bus"};
+</script>
+
+<!-- end:debug info -->
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/Editorial/b09e9aa6/assets/css/editorial_main.css"/>
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/Editorial/b09e9aa6/assets/css/editorial_orchidCustomizations.css"/>
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/Editorial/b09e9aa6/assets/css/orchidSearch.css"/>
+<!-- end:inject styles -->
+
+</head>
+<body class="is-loading">
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="http://localhost:8080" class="logo">Global MicroApps Bus</a>
+    <ul class="icons">
+    
+    
+    
+    </ul>
+</header>
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>Global MicroApps Bus</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        
+                    
+                
+            
+        
+            
+                
+                    
+                        <div class="component component-readme component-order-0">
+                            <h1 id="introduction">Introduction</h1>
+<p>This component provides a <strong><em>limited Service Bus</em></strong> brand functionality. If you are not familiar with Service Bus tools for integrating solutions, you could have a look at this <a href="https://es.wikipedia.org/wiki/Enterprise_service_bus">basic documentation</a>.</p>
+<p>We've mentioned that this module provides a <em>limited Service Bus</em> due to it just follows and implements a <a href="https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern">Publish-Subscribe pattern</a>, which is a messaging pattern, following a <strong>topic-based</strong> filtering.</p>
+<p>This component has been implemented under the reactive programing paradigm. That's why you'll see that return types are something like:</p>
+<ul>
+<li><code>Single&lt;ResponseMessage&gt;</code></li>
+<li><code>Observable&lt;ResponseMessage&gt;</code></li>
+</ul>
+<p>This projects has been developed under <code>kotlin 1.3.30</code>, <code>kotlin-multiplatform</code> and <code>jdk-8</code>. Also <code>gradle-4.10</code> was used as building tool.</p>
+<h1 id="getting-started">Getting Started</h1>
+<p>TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:</p>
+<h2 id="installation-process">Installation process</h2>
+<h3 id="android-kotlin-java">Android (Kotlin, Java)</h3>
+<ul>
+<li>Add this repository to your project, at <code>build.gradle</code> file</li>
+</ul>
+<pre><code> repositories {
+        maven {
+             url 'https://pkgs.dev.azure.com/dedgeglobal/_packaging/SDK-Snapshot/maven/v1'
+             credentials {
+                //your credentials go here
+             }
+        }
+ }
+</code></pre>
+<ul>
+<li>Add this dependency to your project, at <code>build.gradle</code> file</li>
+</ul>
+<pre><code> dependencies { 
+    implementation (group: 'com.globalkit.microapps', name: 'GlobalKit_MicroApps_Bus_External-jvm', version: &quot;1.0.0&quot;)
+ }
+</code></pre>
+<h3 id="swift-ios">Swift iOS</h3>
+<ul>
+<li>On going</li>
+</ul>
+<h2 id="dependencies">Dependencies</h2>
+<p>This project depends on rx-common project for reactive multiplatform support:</p>
+<ul>
+<li><code>com.noheltcj:rx-common:0.5.2</code></li>
+<li><code>com.noheltcj:rx-common-jvm:0.5.2</code></li>
+</ul>
+<p>You can take a look at <a href="https://github.com/noheltcj/RxCommon">rx-common project repository</a> for further information.</p>
+<h2 id="latest-releases">Latest releases</h2>
+<p>Current stable version of this project: 1.0.0</p>
+<h2 id="api-references">API references</h2>
+<p>The main functionality is exposed by the <a href="/com/globalkit/microapps/bus/service/Bus">Bus class</a>. You should start by reading that class documentation.</p>
+<h2 id="build-and-test">Build and Test</h2>
+<ul>
+<li>You just need to execute the <code>build</code> gradle task in order to starts using the Bus</li>
+</ul>
+<h2 id="examples">Examples</h2>
+<ol>
+<li>Subscribe: Create a new subscription to the topic <code>topic1</code> and store the subscription id in order to unsubscribe later</li>
+</ol>
+<pre><code class="language-kotlin">        var subsCriptionId : String
+        //1) create a new subscription (register a new subscriber) through Bus.subscribe method
+        Bus.subscribe(
+            &quot;topic1&quot;, //2) subscription at topic 'topic1'
+            //3)
+            //  3.1) lambda function taking a RequestMessage instance as input
+            //  3.2) it treats/processes the RequestMessage instance and
+            //  3.3) it returns a Single&lt;ResponseMessage&gt;
+            { requestMessage -&gt;
+                println(&quot;Attending at subscriber 1&quot;)
+                Single(just = ResponseMessage(id = requestMessage.id, result = &quot;{'result': 'result from subscriber 1'}&quot;))
+            },
+            //4) lambda function which specifies what to do in case any exception occurs
+            { e -&gt; println(&quot;Error occurred at subscriber 1 {$e}&quot;) }
+        )
+        //5) we subscribe to response in order to get the response message
+        .subscribe(
+            NextObserver { response -&gt;
+                assertTrue(response.isSuccess)//5.1) we check that subscription succeeded
+                subsCriptionId = response.id!!//5.2) we obtain the subscription id in order to use it later when we need to unsubscribe
+                println(&quot;Subscription id is $subsCriptionId&quot;)
+                assertEquals(&quot;t1&quot;, subsCriptionId)
+            }
+        ).dispose() //6) finally we dispose to end up the previous subscription at step 5
+</code></pre>
+<ol start="2">
+<li>PublishAsync: publish a new message into the topic <code>topic1</code></li>
+</ol>
+<pre><code class="language-kotlin">        //1) create the message to be sent
+        val requestMessage = RequestMessage(id = &quot;message1&quot;, headers = &quot;{'header1':'header1 value'}&quot;, parameters = &quot;{'parameter1':'parameter1 value'}&quot;)
+
+        //2) publish a message through Bus.publishAsync method
+        Bus.publishAsync(
+            &quot;topic1&quot;,//2.1) topic where the message will be published into
+                  requestMessage//2.2) message instance to be published
+        )
+        //3) we subscribe to get response(s) and process them
+        ?.subscribe(
+                NextObserver{ response -&gt;
+                    assertTrue(response.isSuccess)//3.1) we check that the message was correctly processed
+                    assertEquals(requestMessage.id, response.id)//3.2) we check that the response id is equal to the request id
+                    assertTrue(response.result!!.contains(&quot;result from subscriber 1&quot;))
+                    println(&quot;response =&gt; $response&quot;)
+                }
+        )?.dispose() //4) we dispose to end up the previous subscription at step 3
+
+        requestMessage.complete()//5) finally AND VERY IMPORTANT; whe indicate that the request has been completed. This must be called whenever the response treatment has been finished
+        
+</code></pre>
+<ol start="3">
+<li>PublishAsyncWithoutResponse: deliver a new message into the topic <code>topic1</code> without waiting for responses</li>
+</ol>
+<pre><code class="language-kotlin">        //deliver a message
+        //1) create the message to be sent
+        val requestMessage2 = RequestMessage(id = &quot;message2&quot;, headers = &quot;{'header1':'header1 value'}&quot;, parameters = &quot;{'parameter1':'parameter1 value'}&quot;)
+
+        //2) deliver a message through Bus.publishAsyncWithoutResponse method
+        Bus.publishAsyncWithoutResponse(
+            &quot;topic1&quot;,//2.1) topic where the message will be deliver to
+            requestMessage2//2.2) message instance to be deliver
+        )
+        //3) we subscribe to get the response about the delivery status
+        ?.subscribe(
+            NextObserver{ response -&gt;
+                assertTrue(response.isSuccess)//3.1) we check that the message was correctly delivered
+                assertEquals(requestMessage2.id, response.id)//3.2) we check that the response id is equal to the request id
+                assertTrue(response.result!!.contains(&quot;'delivered'&quot;))//3.3) we check that message was correctly delivered
+                println(&quot;response =&gt; $response&quot;)
+            }
+        )?.dispose() //4) we dispose to end up the previous subscription at step 3
+
+        //in this case, we do NOT NEED to complete the request through the complete method (requestMessage2.complete()); this message instance will be automatically completed by the Bus
+</code></pre>
+<ol start="4">
+<li>Unsubscribe: stop attending requests at <code>topic1</code> topic. Here is were we will need the registration id rerieved by the Bus when we subscribed at example 1</li>
+</ol>
+<pre><code class="language-kotlin">        //unsubscribe
+        //1) we unsubscribe through Bus.unsubscribe method
+        Bus.unsubscribe(
+            subsCriptionId //1.1) we specify the subscription id we've ben keeping in memory since we subscribed at example 1
+        )
+         //2) we subscribe to get the response about the unsubscription process
+            ?.subscribe(
+                NextObserver{ response -&gt;
+                    assertTrue(response.isSuccess)//2.1) we check that the unsubscription was correctly performed
+                    println(&quot;response from unsubscribe =&gt; $response&quot;)
+                }
+            )?.dispose() //3) finally we dispose to end up the previous subscription at step 2
+</code></pre>
+
+                        </div>
+                    
+                
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>Global MicroApps Bus</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a class="subheader">Wiki</a>
+    </li>
+    
+
+                
+                    
+    
+
+                
+                    
+    
+    <li>
+        <a href="http://localhost:8080/changelog">Changelog</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">All Classes</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="http://localhost:8080/com/globalkit/microapps/bus/service/Bus">Bus</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="http://localhost:8080/com/globalkit/microapps/bus/core/domain/RequestMessage">RequestMessage</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="http://localhost:8080/com/globalkit/microapps/bus/core/domain/ResponseMessage">ResponseMessage</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently unspecified. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; JavaEden. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+</div>
+
+<!-- start:inject scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+<script src="http://localhost:8080/Editorial/b09e9aa6/assets/js/editorial_util.js"></script>
+<script src="http://localhost:8080/Editorial/b09e9aa6/assets/js/editorial_main.js"></script>
+<script src="http://localhost:8080/Editorial/b09e9aa6/assets/js/editorial_orchidCustomizations.js"></script>
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script src="http://localhost:8080/Editorial/b09e9aa6/assets/js/orchidSearch.js"></script>
+<!-- end:inject scripts -->
+
+</body>
+</html>

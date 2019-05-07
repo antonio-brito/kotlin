@@ -1,0 +1,701 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.16.8"/>
+<link rel="icon" href="http://localhost:8080/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>SubscribableService</title>
+
+
+<meta name="description" content="Global MicroApps Bus project Documentation">
+
+
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.16.8","baseUrl":"http://localhost:8080","environment":"debug","version":"unspecified"};
+</script>
+
+
+
+
+
+<!-- start:debug info -->
+
+<!-- THEME -->
+<!-- Type: Editorial -->
+<!-- Class: com.eden.orchid.editorial.EditorialTheme -->
+
+<!-- PAGE -->
+<!-- Type: kotlindocClass -->
+<!-- Class: com.eden.orchid.kotlindoc.page.KotlindocClassPage -->
+<!-- Layout: index -->
+<!-- Resolved Layout: templates/layouts/index.peb -->
+<!-- Page Template: kotlindocClass, page -->
+<!-- Resolved Page Template:  -->
+
+<!-- RESOURCE -->
+<!-- Class: com.eden.orchid.kotlindoc.resources.KotlinClassdocResource -->
+<!-- Source Filename: com/globalkit/microapps/bus/core/boundary/exit/SubscribableService.html -->
+
+<!-- COMPLETE PAGE CONFIGURATION -->
+<script>
+    window.allData = {"reference":{"path":"com/globalkit/microapps/bus/core/boundary/exit","baseUrl":"http://localhost:8080","fileName":"SubscribableService","extension":"html","usePrettyUrl":true,"link":"http://localhost:8080/com/globalkit/microapps/bus/core/boundary/exit/SubscribableService"},"description":"","title":"SubscribableService"};
+</script>
+
+<!-- end:debug info -->
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/Editorial/8b987280/assets/css/editorial_main.css"/>
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/Editorial/8b987280/assets/css/editorial_orchidCustomizations.css"/>
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/Editorial/8b987280/assets/css/orchidSearch.css"/>
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/assets/css/orchidKotlindoc.css"/>
+<!-- end:inject styles -->
+
+</head>
+<body class="is-loading">
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="http://localhost:8080" class="logo">Global MicroApps Bus</a>
+    <ul class="icons">
+    
+    
+        <li>
+            <a href="https://github.com/username/project" class="icon fa-github">
+                <span class="label">github</span>
+            </a>
+        </li>
+    
+    
+    </ul>
+</header>
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>SubscribableService</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <div class="orchid-sourcedoc">
+
+
+<p id="summary">
+    <b>In package <a href="http://localhost:8080/com/globalkit/microapps/bus/core/boundary/exit">com.globalkit.microapps.bus.core.boundary.exit</a></b>
+</p>
+<p>
+    <code style="padding: 0;">
+        class com.globalkit.microapps.bus.core.boundary.exit.SubscribableService
+    </code>
+</p>
+<div class="class-description" id="description">
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h2 id="methods">Methods</h2>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__abstract_fun_subscribe_topic__String__function___RequestMessage____ERROR_CLASS___ex___Throwable___Unit____ERROR_CLASS_">
+        <code>
+        abstract fun subscribe(topic: String, function: (<a href="http://localhost:8080/com/globalkit/microapps/bus/core/domain/RequestMessage">RequestMessage</a>)-&gt;<ERROR CLASS>, ex: (Throwable)-&gt;Unit): <ERROR CLASS>
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        topic: String
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        function: (<a href="http://localhost:8080/com/globalkit/microapps/bus/core/domain/RequestMessage">RequestMessage</a>)-&gt;<ERROR CLASS>
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        ex: (Throwable)-&gt;Unit
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__abstract_fun_publish_topic__String__message__RequestMessage____ERROR_CLASS_">
+        <code>
+        abstract fun publish(topic: String, message: <a href="http://localhost:8080/com/globalkit/microapps/bus/core/domain/RequestMessage">RequestMessage</a>): <ERROR CLASS>
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        topic: String
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        message: <a href="http://localhost:8080/com/globalkit/microapps/bus/core/domain/RequestMessage">RequestMessage</a>
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__abstract_fun_unsubscribe_subscriptionId__String____ERROR_CLASS_">
+        <code>
+        abstract fun unsubscribe(subscriptionId: String): <ERROR CLASS>
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        subscriptionId: String
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__abstract_fun_publishAsync_topic__String__message__RequestMessage____ERROR_CLASS__">
+        <code>
+        abstract fun publishAsync(topic: String, message: <a href="http://localhost:8080/com/globalkit/microapps/bus/core/domain/RequestMessage">RequestMessage</a>): <ERROR CLASS>?
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        topic: String
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        message: <a href="http://localhost:8080/com/globalkit/microapps/bus/core/domain/RequestMessage">RequestMessage</a>
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>?
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__abstract_fun_publishAsyncWithoutResponse_topic__String__message__RequestMessage____ERROR_CLASS_">
+        <code>
+        abstract fun publishAsyncWithoutResponse(topic: String, message: <a href="http://localhost:8080/com/globalkit/microapps/bus/core/domain/RequestMessage">RequestMessage</a>): <ERROR CLASS>
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        topic: String
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        message: <a href="http://localhost:8080/com/globalkit/microapps/bus/core/domain/RequestMessage">RequestMessage</a>
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+
+
+</div>
+                    
+                
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>Global MicroApps Bus</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a class="subheader">Wiki</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a href="http://localhost:8080/wiki/installation">Installation</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a href="http://localhost:8080/wiki/configuration">Basic Configuration</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Features</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="http://localhost:8080/wiki/features/one">Feature One</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="http://localhost:8080/wiki/features/two">Feature Two</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    
+    <li>
+        <a href="http://localhost:8080/wiki/extending">Extending</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a href="http://localhost:8080/changelog">Changelog</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">All Packages</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="http://localhost:8080/com/globalkit/microapps/bus/core/boundary/enter">com.globalkit.microapps.bus.core.boundary.enter</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="http://localhost:8080/com/globalkit/microapps/bus/core/boundary/exit">com.globalkit.microapps.bus.core.boundary.exit</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="http://localhost:8080/com/globalkit/microapps/bus/core/domain">com.globalkit.microapps.bus.core.domain</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="http://localhost:8080/com/globalkit/microapps/bus/service">com.globalkit.microapps.bus.service</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">All Classes</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="http://localhost:8080/com/globalkit/microapps/bus/service/Bus">Bus</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="http://localhost:8080/com/globalkit/microapps/bus/core/domain/RequestMessage">RequestMessage</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="http://localhost:8080/com/globalkit/microapps/bus/core/domain/ResponseMessage">ResponseMessage</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="http://localhost:8080/com/globalkit/microapps/bus/core/boundary/enter/Subscribable">Subscribable</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="http://localhost:8080/com/globalkit/microapps/bus/core/boundary/exit/SubscribableService">SubscribableService</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+            </ul>
+        </nav>
+        
+        <nav class="menu">
+            <header class="major">
+                <h2>SubscribableService</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a href="#summary">Summary</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a href="#description">Description</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Methods</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="#method__abstract_fun_subscribe_topic__String__function___RequestMessage____ERROR_CLASS___ex___Throwable___Unit____ERROR_CLASS_">abstract fun subscribe(topic: String, function: (RequestMessage)-&gt;&lt;ERROR CLASS&gt;, ex: (Throwable)-&gt;Unit): &lt;ERROR CLASS&gt;</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#method__abstract_fun_publish_topic__String__message__RequestMessage____ERROR_CLASS_">abstract fun publish(topic: String, message: RequestMessage): &lt;ERROR CLASS&gt;</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#method__abstract_fun_unsubscribe_subscriptionId__String____ERROR_CLASS_">abstract fun unsubscribe(subscriptionId: String): &lt;ERROR CLASS&gt;</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#method__abstract_fun_publishAsync_topic__String__message__RequestMessage____ERROR_CLASS__">abstract fun publishAsync(topic: String, message: RequestMessage): &lt;ERROR CLASS&gt;?</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#method__abstract_fun_publishAsyncWithoutResponse_topic__String__message__RequestMessage____ERROR_CLASS_">abstract fun publishAsyncWithoutResponse(topic: String, message: RequestMessage): &lt;ERROR CLASS&gt;</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently unspecified. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; JavaEden. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+</div>
+
+<!-- start:inject scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+<script src="http://localhost:8080/Editorial/8b987280/assets/js/editorial_util.js"></script>
+<script src="http://localhost:8080/Editorial/8b987280/assets/js/editorial_main.js"></script>
+<script src="http://localhost:8080/Editorial/8b987280/assets/js/editorial_orchidCustomizations.js"></script>
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script src="http://localhost:8080/Editorial/8b987280/assets/js/orchidSearch.js"></script>
+<!-- end:inject scripts -->
+
+</body>
+</html>

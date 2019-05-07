@@ -1,0 +1,593 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.16.9"/>
+<link rel="icon" href="http://localhost:8080/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>Bus</title>
+
+
+<meta name="description" content="Global MicroApps Bus project Documentation">
+
+
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.16.9","baseUrl":"http://localhost:8080","environment":"debug","version":"unspecified"};
+</script>
+
+
+
+
+
+<!-- start:debug info -->
+
+<!-- THEME -->
+<!-- Type: Editorial -->
+<!-- Class: com.eden.orchid.editorial.EditorialTheme -->
+
+<!-- PAGE -->
+<!-- Type: kotlindocClass -->
+<!-- Class: com.eden.orchid.kotlindoc.page.KotlindocClassPage -->
+<!-- Layout: index -->
+<!-- Resolved Layout: templates/layouts/index.peb -->
+<!-- Page Template: kotlindocClass, page -->
+<!-- Resolved Page Template:  -->
+
+<!-- RESOURCE -->
+<!-- Class: com.eden.orchid.kotlindoc.resources.KotlinClassdocResource -->
+<!-- Source Filename: com/globalkit/microapps/bus/service/Bus.html -->
+
+<!-- COMPLETE PAGE CONFIGURATION -->
+<script>
+    window.allData = {"reference":{"path":"com/globalkit/microapps/bus/service","baseUrl":"http://localhost:8080","fileName":"Bus","extension":"html","usePrettyUrl":true,"link":"http://localhost:8080/com/globalkit/microapps/bus/service/Bus"},"description":"","title":"Bus"};
+</script>
+
+<!-- end:debug info -->
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/Editorial/b09e9aa6/assets/css/editorial_main.css"/>
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/Editorial/b09e9aa6/assets/css/editorial_orchidCustomizations.css"/>
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/Editorial/b09e9aa6/assets/css/orchidSearch.css"/>
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/assets/css/orchidKotlindoc.css"/>
+<!-- end:inject styles -->
+
+</head>
+<body class="is-loading">
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="http://localhost:8080" class="logo">Global MicroApps Bus</a>
+    <ul class="icons">
+    
+    
+    
+    </ul>
+</header>
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>Bus</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <div class="orchid-sourcedoc">
+
+
+<p id="summary">
+    <b>In package <a href="http://localhost:8080/com/globalkit/microapps/bus/service">com.globalkit.microapps.bus.service</a></b>
+</p>
+<p>
+    <code style="padding: 0;">
+        class com.globalkit.microapps.bus.service.Bus
+    </code>
+</p>
+<div class="class-description" id="description">
+<p>Main object-class which provides bus functionality. You must use this object for <b>subscribing</b> to any topic , <b>publishing</b> messages to any topic and <b>unsubscribing</b> from a topic.
+This implementation follows a <a href="https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern">Publish-Subscribe pattern</a>, which is a messaging pattern, following a <b>topic-based</b> filtering.<p>This means:</p><ul><li>if you want to <b>attend requests</b>, at a specific topic, you must <b>subscribe</b> to that specific topic through <code>subscribe</code> method</li><li>if you want to <b>publish a message</b>, to a specific topic, you must send a RequestMessage instance to that specific topic through <code>publishAsync</code> method</li><li>if you want to <b>stop attending requests</b>, you must <b>unsubscribe</b> through <code>unsubscribe</code> method</li></ul><p>Also look at <a href="/com/globalkit/microapps/bus/core/domain/RequestMessage">RequestMessage</a>, <a href="/com/globalkit/microapps/bus/core/domain/ResponseMessage">ResponseMessage</a></p></p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h2 id="methods">Methods</h2>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__fun_subscribe_topic__String__function___RequestMessage____ERROR_CLASS___ex___Throwable___Unit____ERROR_CLASS_">
+        <code>
+        fun subscribe(topic: String, function: (<a href="http://localhost:8080/com/globalkit/microapps/bus/core/domain/RequestMessage">RequestMessage</a>)-&gt;<ERROR CLASS>, ex: (Throwable)-&gt;Unit): <ERROR CLASS>
+        </code>
+    </div>
+    <div class="panel-body"><p>This method allows you to subscribe to a specified topic in order to attend messages. You must specify, within a lambda function, how to treat/process the request instance
+and must return a <code>Single&lt;ResponseMessage&gt;</code></p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        topic: String
+        </code>
+        
+            <br><br>
+            <div><p>topic you want to subscribe to</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        function: (<a href="http://localhost:8080/com/globalkit/microapps/bus/core/domain/RequestMessage">RequestMessage</a>)-&gt;<ERROR CLASS>
+        </code>
+        
+            <br><br>
+            <div><p>function: (RequestMessage) -&gt; Single&lt;ResponseMessage&gt; this is the lambda function to be invoked/executed when a new message arrives. Within this function, the subscriber
+indicates how to treat the request and how to generate the response instance. It is highly recommended that the response id, at <code>id</code> attribute, contains the value of the request id in order
+to indicate request - response relationship</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        ex: (Throwable)-&gt;Unit
+        </code>
+        
+            <br><br>
+            <div><p>exceptional lambda function to be invoked/executed when an exception occurs</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>
+        </code>
+    </div>
+    <div><p>com.noheltcj.rxcommon.observables.Single&lt;ResponseMessage&gt;</p>
+<p><b>ResponseMessage</b> indicates whether the subscription succeeded or not.
+It also contains a <b>subscription id</b>, at id attribute, which <b>you must keep in order to unsubscribe later</b> through <code>unsubscribe(subscriptionId: String)</code> method</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__fun_publishAsync_topic__String__message__RequestMessage____ERROR_CLASS__">
+        <code>
+        fun publishAsync(topic: String, message: <a href="http://localhost:8080/com/globalkit/microapps/bus/core/domain/RequestMessage">RequestMessage</a>): <ERROR CLASS>?
+        </code>
+    </div>
+    <div class="panel-body"><p>This method allows you to publish a message, in a broadcast mode, to a specific topic and get an Observable containing the responses for that message; responses from all subscribers in the specified topic.</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        topic: String
+        </code>
+        
+            <br><br>
+            <div><p>topic you want to publish into</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        message: <a href="http://localhost:8080/com/globalkit/microapps/bus/core/domain/RequestMessage">RequestMessage</a>
+        </code>
+        
+            <br><br>
+            <div><p>RequestMessage instance containing the proper information in order to be correctly attended by subscribers</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>?
+        </code>
+    </div>
+    <div><p>com.noheltcj.rxcommon.observables.Observable&lt;ResponseMessage&gt;</p>
+<p>Each <b>ResponseMessage</b> instance indicates:</p>
+<ul><li>whether the message was successfully attended or not</li><li>if there was an error, you could get the exception detail from the <code>error</code> attribute</li><li>optionally, the response ID, at <code>id</code> attribute. This id will be set by the subscriber which attended the request and generated the response instance.
+This attribute is mainly intended to specify the request id this response is for</li></ul>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__fun_unsubscribe_subscriptionId__String____ERROR_CLASS_">
+        <code>
+        fun unsubscribe(subscriptionId: String): <ERROR CLASS>
+        </code>
+    </div>
+    <div class="panel-body"><p>This method allows you to <b>stop subscribers from attending requests</b>. In performance terms, <b>this is a very important method you must call, once per subscription, whenever you need toindicate that the subscriber is not attending requests anymore</b></p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        subscriptionId: String
+        </code>
+        
+            <br><br>
+            <div><p>subscriber's subscription id you obtained when you subscribed, through <code>subscribe</code> method, and you want to unsubscribe</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>
+        </code>
+    </div>
+    <div><p>com.noheltcj.rxcommon.observables.Single&lt;ResponseMessage&gt;</p>
+<p><b>ResponseMessage</b> instance indicates:</p>
+<ul><li>whether the unsubscribe operation was successfully processed or not</li><li>if any error occurred, you could get the exception detail from the <code>error</code> attribute</li></ul>
+<p><i>Note: this response will never specify an id; <code>id</code> attribute will always be null</i></p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__fun_publishAsyncWithoutResponse_topic__String__message__RequestMessage____ERROR_CLASS_">
+        <code>
+        fun publishAsyncWithoutResponse(topic: String, message: <a href="http://localhost:8080/com/globalkit/microapps/bus/core/domain/RequestMessage">RequestMessage</a>): <ERROR CLASS>
+        </code>
+    </div>
+    <div class="panel-body"><p>This method allows you to deliver a message, in a broadcast mode, to a specific topic.<p>The unique difference with <code>publishAsync(topic: String, message: RequestMessage)</code> method is that  this method will not retrieve any responses for the delivered message.</p><p><i>Use <code>publishAsyncWithoutResponse(topic: String, message: RequestMessage)</code> instead of <code>publishAsync(topic: String, message: RequestMessage)</code> method when you do not need any responses from subscribers, you just need to deliver a message and you do not matter what happens after that</i></p></p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        topic: String
+        </code>
+        
+            <br><br>
+            <div><p>topic you want to deliver the message into</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        message: <a href="http://localhost:8080/com/globalkit/microapps/bus/core/domain/RequestMessage">RequestMessage</a>
+        </code>
+        
+            <br><br>
+            <div><p>RequestMessage instance containing the proper information in order to be correctly attended by subscribers</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>
+        </code>
+    </div>
+    <div><p>com.noheltcj.rxcommon.observables.Single&lt;ResponseMessage&gt;</p>
+<p>The <b>ResponseMessage</b> instance indicates:</p>
+<ul><li>the response ID, at <code>id</code> attribute. This id will be the same value at the provided request instance</li><li>the result, at <code>result</code> attribute, which will be one of these JSON formatted messages: <i>{'status':'delivered'}</i> or <i>{'status':'not delivered'}</i></li></ul>
+</div>
+</div>
+
+</div>
+
+
+
+
+</div>
+                    
+                
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>Global MicroApps Bus</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a class="subheader">Wiki</a>
+    </li>
+    
+
+                
+                    
+    
+
+                
+                    
+    
+    <li>
+        <a href="http://localhost:8080/changelog">Changelog</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">All Classes</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="http://localhost:8080/com/globalkit/microapps/bus/service/Bus">Bus</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="http://localhost:8080/com/globalkit/microapps/bus/core/domain/RequestMessage">RequestMessage</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="http://localhost:8080/com/globalkit/microapps/bus/core/domain/ResponseMessage">ResponseMessage</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+            </ul>
+        </nav>
+        
+        <nav class="menu">
+            <header class="major">
+                <h2>Bus</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a href="#summary">Summary</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a href="#description">Description</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Methods</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="#method__fun_subscribe_topic__String__function___RequestMessage____ERROR_CLASS___ex___Throwable___Unit____ERROR_CLASS_">fun subscribe(topic: String, function: (RequestMessage)-&gt;&lt;ERROR CLASS&gt;, ex: (Throwable)-&gt;Unit): &lt;ERROR CLASS&gt;</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#method__fun_publishAsync_topic__String__message__RequestMessage____ERROR_CLASS__">fun publishAsync(topic: String, message: RequestMessage): &lt;ERROR CLASS&gt;?</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#method__fun_unsubscribe_subscriptionId__String____ERROR_CLASS_">fun unsubscribe(subscriptionId: String): &lt;ERROR CLASS&gt;</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#method__fun_publishAsyncWithoutResponse_topic__String__message__RequestMessage____ERROR_CLASS_">fun publishAsyncWithoutResponse(topic: String, message: RequestMessage): &lt;ERROR CLASS&gt;</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently unspecified. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; JavaEden. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+</div>
+
+<!-- start:inject scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+<script src="http://localhost:8080/Editorial/b09e9aa6/assets/js/editorial_util.js"></script>
+<script src="http://localhost:8080/Editorial/b09e9aa6/assets/js/editorial_main.js"></script>
+<script src="http://localhost:8080/Editorial/b09e9aa6/assets/js/editorial_orchidCustomizations.js"></script>
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script src="http://localhost:8080/Editorial/b09e9aa6/assets/js/orchidSearch.js"></script>
+<!-- end:inject scripts -->
+
+</body>
+</html>

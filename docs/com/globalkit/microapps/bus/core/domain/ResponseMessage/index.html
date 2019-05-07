@@ -1,0 +1,461 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.16.9"/>
+<link rel="icon" href="http://localhost:8080/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>ResponseMessage</title>
+
+
+<meta name="description" content="Global MicroApps Bus project Documentation">
+
+
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.16.9","baseUrl":"http://localhost:8080","environment":"debug","version":"unspecified"};
+</script>
+
+
+
+
+
+<!-- start:debug info -->
+
+<!-- THEME -->
+<!-- Type: Editorial -->
+<!-- Class: com.eden.orchid.editorial.EditorialTheme -->
+
+<!-- PAGE -->
+<!-- Type: kotlindocClass -->
+<!-- Class: com.eden.orchid.kotlindoc.page.KotlindocClassPage -->
+<!-- Layout: index -->
+<!-- Resolved Layout: templates/layouts/index.peb -->
+<!-- Page Template: kotlindocClass, page -->
+<!-- Resolved Page Template:  -->
+
+<!-- RESOURCE -->
+<!-- Class: com.eden.orchid.kotlindoc.resources.KotlinClassdocResource -->
+<!-- Source Filename: com/globalkit/microapps/bus/core/domain/ResponseMessage.html -->
+
+<!-- COMPLETE PAGE CONFIGURATION -->
+<script>
+    window.allData = {"reference":{"path":"com/globalkit/microapps/bus/core/domain","baseUrl":"http://localhost:8080","fileName":"ResponseMessage","extension":"html","usePrettyUrl":true,"link":"http://localhost:8080/com/globalkit/microapps/bus/core/domain/ResponseMessage"},"description":"","title":"ResponseMessage"};
+</script>
+
+<!-- end:debug info -->
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/Editorial/b09e9aa6/assets/css/editorial_main.css"/>
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/Editorial/b09e9aa6/assets/css/editorial_orchidCustomizations.css"/>
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/Editorial/b09e9aa6/assets/css/orchidSearch.css"/>
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/assets/css/orchidKotlindoc.css"/>
+<!-- end:inject styles -->
+
+</head>
+<body class="is-loading">
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="http://localhost:8080" class="logo">Global MicroApps Bus</a>
+    <ul class="icons">
+    
+    
+    
+    </ul>
+</header>
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>ResponseMessage</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <div class="orchid-sourcedoc">
+
+
+<p id="summary">
+    <b>In package <a href="http://localhost:8080/com/globalkit/microapps/bus/core/domain">com.globalkit.microapps.bus.core.domain</a></b>
+</p>
+<p>
+    <code style="padding: 0;">
+        class com.globalkit.microapps.bus.core.domain.ResponseMessage
+    </code>
+</p>
+<div class="class-description" id="description">
+<p>ResponseMessage is a data class which is instantiated any time whe need to generate a response for a request. This
+class indicates the id, the result body, any error detail (if any) and if the request treatment succeeded or not<p>Also look at <a href="/com/globalkit/microapps/bus/core/domain/RequestMessage">RequestMessage</a>, <a href="/com/globalkit/microapps/bus/service/Bus">Bus</a></p></p>
+
+</div>
+
+
+
+
+
+<h2 id="fields">Fields</h2>
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__isSuccess__Boolean">
+        <code>
+        isSuccess: Boolean
+        </code>
+    </div>
+    <div class="panel-body"><p>indicates whether the request was successfully processed or not</p>
+</div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__id__String_">
+        <code>
+        id: String?
+        </code>
+    </div>
+    <div class="panel-body"><p><code>optional</code> id for a response instance. This attribute is intended to contain the same id value at the request instance
+this response is instance is for. Te main goal is to establish a request-response relationship. Subscribers are the ones
+which create this response instances.<p><i>It is highly recommended that this attribute contains the value of the request id that generated this response</i></p></p>
+</div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__result__String_">
+        <code>
+        result: String?
+        </code>
+    </div>
+    <div class="panel-body"><p><code>optional</code> Json formatted message which indicates the response for the processed request</p>
+</div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__var_error__Throwable_">
+        <code>
+        var error: Throwable?
+        </code>
+    </div>
+    <div class="panel-body"><p><code>optional</code> if there was an error, you could get the exception detail from this attribute</p>
+</div>
+</div>
+
+
+
+
+
+
+<h2 id="constructors">Constructors</h2>
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="constructor__constructor_id__String___result__String___error__Throwable__">
+        <code>
+        constructor(id: String?, result: String?, error: Throwable?)
+        </code>
+    </div>
+    <div class="panel-body"><p>ResponseMessage is a data class which is instantiated any time whe need to generate a response for a request. This
+class indicates the id, the result body, any error detail (if any) and if the request treatment succeeded or not<p>Also look at <a href="/com/globalkit/microapps/bus/core/domain/RequestMessage">RequestMessage</a>, <a href="/com/globalkit/microapps/bus/service/Bus">Bus</a></p></p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        id: String?
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        result: String?
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        error: Throwable?
+        </code>
+        
+    </li>
+
+</ul>
+
+</div>
+
+
+
+
+
+</div>
+                    
+                
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>Global MicroApps Bus</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a class="subheader">Wiki</a>
+    </li>
+    
+
+                
+                    
+    
+
+                
+                    
+    
+    <li>
+        <a href="http://localhost:8080/changelog">Changelog</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">All Classes</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="http://localhost:8080/com/globalkit/microapps/bus/service/Bus">Bus</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="http://localhost:8080/com/globalkit/microapps/bus/core/domain/RequestMessage">RequestMessage</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="http://localhost:8080/com/globalkit/microapps/bus/core/domain/ResponseMessage">ResponseMessage</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+            </ul>
+        </nav>
+        
+        <nav class="menu">
+            <header class="major">
+                <h2>ResponseMessage</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a href="#summary">Summary</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a href="#description">Description</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Fields</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="#field__isSuccess__Boolean">isSuccess: Boolean</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#field__id__String_">id: String?</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#field__result__String_">result: String?</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#field__var_error__Throwable_">var error: Throwable?</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Constructors</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="#constructor__constructor_id__String___result__String___error__Throwable__">constructor(id: String?, result: String?, error: Throwable?)</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently unspecified. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; JavaEden. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+</div>
+
+<!-- start:inject scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+<script src="http://localhost:8080/Editorial/b09e9aa6/assets/js/editorial_util.js"></script>
+<script src="http://localhost:8080/Editorial/b09e9aa6/assets/js/editorial_main.js"></script>
+<script src="http://localhost:8080/Editorial/b09e9aa6/assets/js/editorial_orchidCustomizations.js"></script>
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script src="http://localhost:8080/Editorial/b09e9aa6/assets/js/orchidSearch.js"></script>
+<!-- end:inject scripts -->
+
+</body>
+</html>

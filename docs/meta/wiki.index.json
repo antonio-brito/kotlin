@@ -1,0 +1,19 @@
+{
+  "ownKey": "wiki",
+  "childrenPages": {"wiki": {
+    "ownKey": "wiki",
+    "ownPages": [{
+      "reference": {
+        "path": "",
+        "baseUrl": "http://localhost:8080",
+        "fileName": "wiki",
+        "extension": "html",
+        "usePrettyUrl": true,
+        "link": "http://localhost:8080/wiki"
+      },
+      "description": "",
+      "title": "Wiki",
+      "content": "<html>\n <head><\/head>\n <body><\/body>\n<\/html>\n"
+    }]
+  }}
+}
