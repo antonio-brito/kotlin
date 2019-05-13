@@ -1,0 +1,31 @@
+{
+  "ownKey": "home",
+  "ownPages": [
+    {
+      "reference": {
+        "path": "",
+        "baseUrl": "https://antonio-brito.github.io/kotlin",
+        "fileName": "",
+        "extension": "html",
+        "usePrettyUrl": true,
+        "link": "https://antonio-brito.github.io/kotlin"
+      },
+      "description": "",
+      "title": "Global MicroApps Bus",
+      "content": ""
+    },
+    {
+      "reference": {
+        "path": "",
+        "baseUrl": "https://antonio-brito.github.io/kotlin",
+        "fileName": "404",
+        "extension": "html",
+        "usePrettyUrl": false,
+        "link": "https://antonio-brito.github.io/kotlin/404.html"
+      },
+      "description": "",
+      "title": "Global MicroApps Bus",
+      "content": ""
+    }
+  ]
+}

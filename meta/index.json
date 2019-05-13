@@ -1,0 +1,68 @@
+{
+  "ownKey": "index",
+  "childrenPages": {"meta": {
+    "ownKey": "meta",
+    "ownPages": [
+      {
+        "reference": {
+          "path": "meta",
+          "baseUrl": "https://antonio-brito.github.io/kotlin",
+          "fileName": "home.index",
+          "extension": "json",
+          "usePrettyUrl": false,
+          "link": "https://antonio-brito.github.io/kotlin/meta/home.index.json"
+        },
+        "description": "",
+        "title": "Home . Index"
+      },
+      {
+        "reference": {
+          "path": "meta",
+          "baseUrl": "https://antonio-brito.github.io/kotlin",
+          "fileName": "kotlindoc.index",
+          "extension": "json",
+          "usePrettyUrl": false,
+          "link": "https://antonio-brito.github.io/kotlin/meta/kotlindoc.index.json"
+        },
+        "description": "",
+        "title": "Kotlindoc . Index"
+      },
+      {
+        "reference": {
+          "path": "meta",
+          "baseUrl": "https://antonio-brito.github.io/kotlin",
+          "fileName": "pages.index",
+          "extension": "json",
+          "usePrettyUrl": false,
+          "link": "https://antonio-brito.github.io/kotlin/meta/pages.index.json"
+        },
+        "description": "",
+        "title": "Pages . Index"
+      },
+      {
+        "reference": {
+          "path": "meta",
+          "baseUrl": "https://antonio-brito.github.io/kotlin",
+          "fileName": "wiki.index",
+          "extension": "json",
+          "usePrettyUrl": false,
+          "link": "https://antonio-brito.github.io/kotlin/meta/wiki.index.json"
+        },
+        "description": "",
+        "title": "Wiki . Index"
+      },
+      {
+        "reference": {
+          "path": "meta",
+          "baseUrl": "https://antonio-brito.github.io/kotlin",
+          "fileName": "all.index",
+          "extension": "json",
+          "usePrettyUrl": false,
+          "link": "https://antonio-brito.github.io/kotlin/meta/all.index.json"
+        },
+        "description": "",
+        "title": "All . Index"
+      }
+    ]
+  }}
+}

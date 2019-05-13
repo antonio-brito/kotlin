@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd"
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <sitemap>
+        <loc>https://antonio-brito.github.io/kotlin/sitemap-home.xml</loc>
+        <lastmod>2019-05-13T12:30:31.973</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://antonio-brito.github.io/kotlin/sitemap-kotlindoc.xml</loc>
+        <lastmod>2019-05-13T12:30:31.976</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://antonio-brito.github.io/kotlin/sitemap-pages.xml</loc>
+        <lastmod>2019-05-13T12:30:31.980</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://antonio-brito.github.io/kotlin/sitemap-wiki.xml</loc>
+        <lastmod>2019-05-13T12:30:31.982</lastmod>
+    </sitemap>
+    
+</sitemapindex>

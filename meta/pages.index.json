@@ -1,0 +1,19 @@
+{
+  "ownKey": "pages",
+  "childrenPages": {"changelog": {
+    "ownKey": "changelog",
+    "ownPages": [{
+      "reference": {
+        "path": "",
+        "baseUrl": "https://antonio-brito.github.io/kotlin",
+        "fileName": "changelog",
+        "extension": "html",
+        "usePrettyUrl": true,
+        "link": "https://antonio-brito.github.io/kotlin/changelog"
+      },
+      "description": "",
+      "title": "Changelog",
+      "content": ""
+    }]
+  }}
+}
